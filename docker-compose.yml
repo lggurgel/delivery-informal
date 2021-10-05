@@ -8,6 +8,8 @@ services:
         - 6543:6543
     depends_on:
         - api_db
+    volumes:
+        - .:/app
 
   api_db:
     image: postgres:14.0-alpine

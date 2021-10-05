@@ -1,7 +1,9 @@
-FROM python:3.9-alpine
+FROM python:3.9
 
-RUN addgroup app && adduser -S -G app app
-USER app
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONPATH=/app/
+RUN mkdir /app
+RUN apt update -y
 
 WORKDIR /app
 
