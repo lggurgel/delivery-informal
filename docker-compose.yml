@@ -8,8 +8,8 @@ services:
         - 80:80
     depends_on:
         - api_db
-    # volumes:
-    #     - .:/app
+    volumes:
+        - .:/code
 
   api_db:
     image: postgres:14.0
